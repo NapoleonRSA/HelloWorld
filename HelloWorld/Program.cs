@@ -10,21 +10,15 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //int x;
-            //int y;
-            //x = 7;
-            //y = x + 3;
-            Console.WriteLine("What is your name?");
-            Console.WriteLine("Type your first name:");
-            string myFirstName;
-            myFirstName = Console.ReadLine();
+            Console.WriteLine("Bob's Big Giveaway");
+            Console.Write("Choose a door : 1, 2 or 3 :");
+            string uservalue = Console.ReadLine();
 
-            Console.WriteLine("What is your Last Name ?");
-            Console.WriteLine("Type your Last Name :");
-
-            string myLastName;
-            myLastName = Console.ReadLine();
-            Console.WriteLine("Hello, " + myFirstName + " " + myLastName );
+            if (uservalue == "1")
+            {
+                string message = "You won a new car !";
+                Console.WriteLine(message);
+            }
             Console.ReadLine();
         }
     }
