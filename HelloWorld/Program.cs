@@ -21,8 +21,16 @@ namespace HelloWorld
             //string myString = string.Format("Percentage : {0:P}", .123);
             //string myString = string.Format("Phone Number: {0:(###) ### ####}", 1234567890);
 
-            string myString = " That summer we took threes across the board";
-            myString = myString.Substring(6);
+            //string myString = " That summer we took threes across the board";
+            //myString = myString.Substring(6);
+
+            StringBuilder myString = new StringBuilder();
+            for (int i = 0; i < 100; i++)
+            {
+                myString.Append("--");
+                myString.Append(i);
+            }
+
             Console.WriteLine(myString);
             Console.ReadLine();
         }
