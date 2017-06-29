@@ -10,45 +10,62 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Bob's Big Giveaway");
-            //Console.Write("Choose a door : 1, 2 or 3 :");
-            //string uservalue = Console.ReadLine();
-            //string message;
+            bool displayMenu = true;
+            while (displayMenu)
+            {
+               displayMenu = MainMenu();
+            }
+        }
 
-            //if (uservalue == "1")
-            //{
-            //     message = "You won a new car !";
-            //    Console.WriteLine(message);
-            //}
+        private static bool MainMenu()
+        {
+            Console.WriteLine("Choose an option:");
+            Console.WriteLine("1) Option 1");
+            Console.WriteLine("2) Option 2");
+            Console.WriteLine("3) Exit");
 
-            //else if (uservalue == "2")
-            //{
-            //     message = "You won a new boat !";
-            //    Console.WriteLine(message);
-            //}
-            //else if (uservalue == "3")
-            //{
-            //     message = "You won a cat !";
-            //    Console.WriteLine(message);
-            //}
+            string result = Console.ReadLine();
 
-            //else
-            //{
-            //     message = "Sorry we didnt understand";
-            //    Console.WriteLine(message);
-            //    message += " You loose";
-            //}
-            //Console.ReadLine();
+            if (result == "1")
+            {
+                PrintNumbers();
+                return true;
+            }
+            else if (result == "2")
+            {
+                GuessingGame();
+                return true;
+            }
+            else if (result == "3")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
-            Console.WriteLine("Bob's Big Giveaway");
-            Console.Write("Choose a door : 1, 2 or 3 - ");
-            string userValue = Console.ReadLine();
+        private static void PrintNumbers()
+        {
+            Console.WriteLine("Print numbers");
+            Console.ReadLine();
+            Console.Write("Type a number: ");
+            int result = int.Parse(Console.ReadLine());
+            int counter = 1;
+            while ( counter < result)
+            {
+                Console.Write(counter);
+                Console.Write("-");
+                counter++;
 
-            string message = (userValue == "1") ? "boat" : "strand of lint";
-            //Console.WriteLine("You won a {0}",message);
-            //Console.ReadLine();
+            }
+            Console.ReadLine();
+        }
 
-            Console.WriteLine("You entered: {0}, therfore you won a {1}",userValue,message);
+        private static void GuessingGame()
+        {
+            Console.WriteLine("Guessing Game !");
             Console.ReadLine();
         }
     }
