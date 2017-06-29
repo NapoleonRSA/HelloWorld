@@ -12,6 +12,17 @@ namespace HelloWorld
         {
             //string myString = "My \"so-called\" life ";
             //string myString = "What if i need a \nnew Line?";
+            //string myString = "Go to your  c:\\Drive";
+            //string myString = @"Go to your  c:\Drive";
+
+            //string myString = String.Format("{0} = {1}", "First", "Second");
+            //string myString = string.Format("{0:C}", 123.45);
+            //string myString = string.Format("{0:N}", 1234567890);
+            //string myString = string.Format("Percentage : {0:P}", .123);
+            //string myString = string.Format("Phone Number: {0:(###) ### ####}", 1234567890);
+
+            string myString = " That summer we took threes across the board";
+            myString = myString.Substring(6);
             Console.WriteLine(myString);
             Console.ReadLine();
         }
